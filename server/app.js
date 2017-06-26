@@ -11,7 +11,8 @@ var config = require('./config/environment');
 var http = require('http');
 
 // Connect to MongoDB
-mongoose.connect(config.mongo.uri, config.mongo.options);
+// mongoose.connect(config.mongo.uri, config.mongo.options);
+mongoose.connect('mongodb://AndreaDSouza:12three45@ds032340.mlab.com:32340/movieapp');
 mongoose.connection.on('error', function(err) {
   console.error('MongoDB connection error: ' + err);
   process.exit(-1);
